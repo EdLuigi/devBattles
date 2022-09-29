@@ -38,7 +38,7 @@ const User = (props) => {
 const BlueCircle = (props) => {
     return (
         <div className="w-full absolute flex justify-end items-start mt-[-2px] mx-[2px]">
-            <div className="h-3 w-3 bg-blue rounded-xl border-[1px] border-secondary "></div>
+            <div className="h-3 w-3 bg-[#37AADF] rounded-xl border-[1px] border-secondary "></div>
         </div>
     );
 };
