@@ -1,6 +1,17 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect } from "react";
+import { useState } from "react";
 import { useParams } from "react-router-dom";
-import { linkList1, linkList2, linkList3 } from "../../Utils/LinkList";
+import Aprendiz from "../../pages/Home/Aprendiz";
+import Backend from "../../pages/Home/Backend";
+import DesafiosMaisRanqueados from "../../pages/Home/DesafiosMaisRanqueados";
+import DesafiosPopulares from "../../pages/Home/DesafiosPopulares";
+import DesafiosRecentes from "../../pages/Home/DesafiosRecentes";
+import Design from "../../pages/Home/Design";
+import Freelancer from "../../pages/Home/Freelancer";
+import Hobbista from "../../pages/Home/Hobbista";
+import Hotsite from "../../pages/Home/Hotsite";
+import _3D from "../../pages/Home/_3D";
+import Profissional from "../../pages/Home/Profissional";
 
 const Container = (props) => {
     return (
@@ -12,45 +23,25 @@ const Container = (props) => {
 
 export default function List() {
     const { index } = useParams();
-    const [title, setTitle] = useState("");
-    const lists = [...linkList1, ...linkList2, ...linkList3];
-    const [select, setSelect] = useState(0);
+    const [category, setCategory] = useState(0);
 
     useEffect(() => {
-        lists.map((i) => {
-            if (i.id == index) {
-                setTitle(i.title);
-            }
-        });
+        setCategory(index);
     }, [index]);
-
-    const handleSelect = (e) => {
-        setSelect(e.currentTarget.value);
-    };
 
     return (
         <Container>
-            <div className="flex justify-between">
-                <div>
-                    <h5 className="text-text_primary text-t4 font-bold">
-                        Desafios populares
-                    </h5>
-                    <h5 className="text-text_secondary text-t2">
-                        Exercite seus conhecimentos
-                    </h5>
-                </div>
-                <div className="flex items-center">
-                    <select
-                        defaultValue={select}
-                        onChange={handleSelect}
-                        className="py-1 text-t2 text-text_primary bg-transparent border-b-2"
-                    >
-                        <option value={0}>Este ano</option>
-                        <option value={1}>Este mês</option>
-                        <option value={2}>Todo período</option>
-                    </select>
-                </div>
-            </div>
+            {category == 0 && <DesafiosPopulares />}
+            {category == 1 && <DesafiosRecentes />}
+            {category == 2 && <DesafiosMaisRanqueados />}
+            {category == 3 && <Aprendiz />}
+            {category == 4 && <Hobbista />}
+            {category == 5 && <Freelancer />}
+            {category == 6 && <Profissional />}
+            {category == 7 && <Design />}
+            {category == 8 && <Hotsite />}
+            {category == 9 && <_3D />}
+            {category == 10 && <Backend />}
         </Container>
     );
 }
