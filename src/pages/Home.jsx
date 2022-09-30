@@ -1,65 +1,70 @@
 import React from "react";
+import { useNavigate, useParams } from "react-router-dom";
 
 const LinkItems = (props) => {
-    const urlName = window.location.href
-        .substring(
-            window.location.href.indexOf("?") + 1,
-            window.location.href.length
-        )
-        .replace(/-/gi, " ");
+    const { index } = useParams();
+    const navigate = useNavigate();
 
+    const handleClick = (i) => {
+        navigate(`/${i}`);
+    };
+
+    const Item = ({ i }) => {
+        return (
+            <div className="py-[6px]">
+                <a
+                    className={
+                        "cursor-pointer py-1 " +
+                        (index == i.id
+                            ? "text-text_primary"
+                            : "text-text_secondary")
+                    }
+                    onClick={() => {
+                        handleClick(i.id);
+                    }}
+                >
+                    {i.title}
+                </a>
+            </div>
+        );
+    };
     return (
         <>
-            {props.list.map((i) => {
-                console.log("XXXXX: " + urlName);
-                return (
-                    <div className="py-[6px] " key={props.list.indexOf(i)}>
-                        <a
-                            href={i.link}
-                            className={
-                                "py-1 " +
-                                (urlName == i.title.toLowerCase()
-                                    ? "text-text_primary"
-                                    : "text-text_secondary")
-                            }
-                        >
-                            {i.title}
-                        </a>
-                    </div>
-                );
-            })}
+            {props.list.map((i) => (
+                <Item i={i} key={props.list.indexOf(i)} />
+            ))}
         </>
     );
 };
 
 const Sidebar = (props) => {
     const linkList1 = [
-        { title: "Desafios populares", link: "/?desafios-populares" },
-        { title: "Desafios recentes", link: "/?desafios-recentes" },
+        { id: 0, title: "Desafios populares" },
+        { id: 1, title: "Desafios recentes" },
         {
+            id: 2,
             title: "Desafios mais ranqueados",
-            link: "/?desafios-mais-ranqueados",
         },
     ];
     const linkList2 = [
-        { title: "Aprendiz", link: "/?aprendiz" },
-        { title: "Hobbista", link: "/?hobbista" },
-        { title: "Freelancer", link: "/?freelancer" },
-        { title: "Profissional", link: "/?profissional" },
+        { id: 3, title: "Aprendiz" },
+        { id: 4, title: "Hobbista" },
+        { id: 5, title: "Freelancer" },
+        { id: 6, title: "Profissional" },
     ];
     const linkList3 = [
-        { title: "Design", link: "/?design" },
-        { title: "Hotsite", link: "/?hotsite" },
-        { title: "3D", link: "/?3d" },
-        { title: "Backend", link: "/?backend" },
+        { id: 7, title: "Design" },
+        { id: 8, title: "Hotsite" },
+        { id: 9, title: "3D" },
+        { id: 10, title: "Backend" },
     ];
 
     const Container = (props) => {
         return <div className="w-[220px] pt-12">{props.children}</div>;
     };
 
-    const Divider = (props) => {
-        return <div className="bg-divider w-full h-[2px] my-2"></div>;
+    const Divider = () => {
+        return <div className="bg-divider w-full h-[2px] my-2" />;
     };
     return (
         <Container>
@@ -73,7 +78,8 @@ const Sidebar = (props) => {
 };
 
 const List = (props) => {
-    return <div className="bg-gray-600 w-[800px]"></div>;
+    const { index } = useParams();
+    return <div className="bg-gray-600 w-[800px]">{index}</div>;
 };
 
 export default function Main() {

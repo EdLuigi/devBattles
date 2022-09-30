@@ -6,7 +6,9 @@ export default function Rotas() {
     return (
         <BrowserRouter>
             <Routes>
-                <Route path="/*" element={<Home />} />
+                <Route path="/" element={<Home />}>
+                    <Route path="/:index" element={<Home />} />
+                </Route>
             </Routes>
         </BrowserRouter>
     );
