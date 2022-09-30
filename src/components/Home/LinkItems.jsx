@@ -13,10 +13,10 @@ const Item = ({ i }) => {
         <div className="py-[6px]">
             <a
                 className={
-                    "cursor-pointer py-1 " +
+                    "cursor-pointer py-1 text-t1 " +
                     (index == i.id
-                        ? "text-text_primary"
-                        : "text-text_secondary")
+                        ? " text-text_primary"
+                        : " text-text_secondary")
                 }
                 onClick={() => {
                     handleClick(i.id);

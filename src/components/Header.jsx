@@ -4,7 +4,7 @@ import { Bell, ChevronDown, Plus } from "react-feather";
 const BellIcon = (props) => {
     return (
         <a href="#" className="flex relative mt-[3px]">
-            <Bell className="text-white" size={"20px"} />
+            <Bell className="text-text_primary" size={"20px"} />
             <BlueCircle />
         </a>
     );
@@ -14,9 +14,9 @@ const PlusIcon = (props) => {
     return (
         <div className="flex ">
             <a href="#" className="flex items-center ">
-                <Plus className="text-white" size={"23px"} />
+                <Plus className="text-text_primary" size={"23px"} />
                 <ChevronDown
-                    className="text-white"
+                    className="text-text_primary"
                     size={"14px"}
                     strokeWidth={"3px"}
                 />
@@ -47,7 +47,7 @@ export default function Header() {
     return (
         <div>
             <div className="flex bg-secondary px-14 py-6 justify-between ">
-                <a href="#" className="text-white font-medium">
+                <a href="#" className="text-text_primary font-bold text-t3">
                     DevBattles
                 </a>
                 <div className="flex pt-[2px] gap-3">

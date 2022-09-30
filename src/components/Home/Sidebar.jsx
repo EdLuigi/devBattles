@@ -1,8 +1,9 @@
 import React from "react";
+import { linkList1, linkList2, linkList3 } from "../../Utils/LinkList";
 import LinkItems from "./LinkItems";
 
 const Container = (props) => {
-    return <div className="w-[220px] pt-12">{props.children}</div>;
+    return <div className="w-[190px] pt-12">{props.children}</div>;
 };
 
 const Divider = () => {
@@ -10,27 +11,6 @@ const Divider = () => {
 };
 
 export default function Sidebar(props) {
-    const linkList1 = [
-        { id: 0, title: "Desafios populares" },
-        { id: 1, title: "Desafios recentes" },
-        {
-            id: 2,
-            title: "Desafios mais ranqueados",
-        },
-    ];
-    const linkList2 = [
-        { id: 3, title: "Aprendiz" },
-        { id: 4, title: "Hobbista" },
-        { id: 5, title: "Freelancer" },
-        { id: 6, title: "Profissional" },
-    ];
-    const linkList3 = [
-        { id: 7, title: "Design" },
-        { id: 8, title: "Hotsite" },
-        { id: 9, title: "3D" },
-        { id: 10, title: "Backend" },
-    ];
-
     return (
         <Container>
             <LinkItems list={linkList1} />

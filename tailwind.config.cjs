@@ -17,6 +17,12 @@ module.exports = {
                 light_danger: "rgba(255,148,148,0.12)",
                 light_primary: "rgba(129,140,248,0.12)",
             },
+            fontSize: {
+                t1: "12px",
+                t2: "14px",
+                t3: "16px",
+                t4: "18px",
+            },
         },
         fontFamily: {
             sans: ["Roboto", "sans-serif"],
