@@ -18,6 +18,9 @@ module.exports = {
                 light_primary: "rgba(129,140,248,0.12)",
             },
         },
+        fontFamily: {
+            sans: ["Roboto", "sans-serif"],
+        },
     },
     plugins: [],
 };
