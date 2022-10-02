@@ -22,7 +22,7 @@ const Container = (props) => {
 };
 
 export default function List() {
-    const { index } = useParams();
+    const { index = 0 } = useParams();
     const [category, setCategory] = useState(0);
 
     useEffect(() => {

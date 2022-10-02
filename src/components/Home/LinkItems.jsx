@@ -2,7 +2,7 @@ import React from "react";
 import { useNavigate, useParams } from "react-router-dom";
 
 const Item = ({ i }) => {
-    const { index } = useParams();
+    const { index = 0 } = useParams();
     const navigate = useNavigate();
 
     const handleClick = (i) => {
@@ -15,7 +15,7 @@ const Item = ({ i }) => {
                 className={
                     "cursor-pointer py-1 text-t1 " +
                     (index == i.id
-                        ? " text-text_primary"
+                        ? " text-text_primary pointer-events-none"
                         : " text-text_secondary")
                 }
                 onClick={() => {
