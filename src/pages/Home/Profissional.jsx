@@ -1,21 +1,10 @@
 import React from "react";
-
-const Header = (props) => {
-    return (
-        <div>
-            <h5 className="text-text_primary text-t4 font-bold">
-                Profissional
-            </h5>
-        </div>
-    );
-};
+import { Header } from "../../Utils/ListHeader";
 
 export default function Profissional() {
     return (
         <div>
-            <div className="flex justify-between">
-                <Header />
-            </div>
+            <Header title="Profissional" />
         </div>
     );
 }

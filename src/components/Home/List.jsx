@@ -14,7 +14,7 @@ import _3D from "../../pages/Home/_3D";
 import Profissional from "../../pages/Home/Profissional";
 
 const Container = (props) => {
-    return <div className="w-[1032px] pt-12 p-12">{props.children}</div>;
+    return <div className="w-[1032px] p-12">{props.children}</div>;
 };
 
 export default function List() {
