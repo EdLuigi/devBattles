@@ -1,8 +1,7 @@
-import React, { useEffect, useState } from "react";
-import { useParams } from "react-router-dom";
+import React, { useState } from "react";
 import { Star, ThumbsUp } from "react-feather";
-import { levels, cardData } from "../../Utils/MockData";
-import { Header } from "../../Utils/ListHeader";
+import { cardData } from "../../Utils/MockData";
+import { Header } from "../../components/Home/ListHeader";
 
 const Button = () => {
     return (

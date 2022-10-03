@@ -1,5 +1,5 @@
 import React from "react";
-import { Header } from "../../Utils/ListHeader";
+import { Header } from "../../components/Home/ListHeader";
 
 export default function Profissional() {
     return (
