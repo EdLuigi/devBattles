@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { Star as StarIcon, ThumbsUp } from "react-feather";
 
 const Container = (props) => {
@@ -10,7 +10,32 @@ const Container = (props) => {
 };
 
 const Img = (props) => {
-    return <div className="flex w-full h-1/3 bg-white rounded-t-md"></div>;
+    const placeholder = "/src/assets/Background_Placeholder.png";
+    const [imgsrc, setImgsrc] = useState("");
+
+    const callApi = () => {
+        fetch("https://api.thecatapi.com/v1/images/search/?size=full")
+            .then((res) => res.json())
+            .then((data) => {
+                setImgsrc(data[0].url);
+            });
+    };
+
+    useEffect(() => {
+        callApi();
+    }, []);
+
+    return (
+        <div className="flex w-full h-1/3 rounded-t-md justify-center">
+            <img
+                src={props.data.img != null ? imgsrc : placeholder}
+                className={
+                    "rounded-t-md " +
+                    (props.data.img != null ? "w-full" : "p-3 opacity-50")
+                }
+            ></img>
+        </div>
+    );
 };
 
 const InfoContainer = (props) => {
@@ -73,7 +98,7 @@ const Star = (props) => {
     return (
         <div
             className={
-                "flex gap-2 text-t1 font-light cursor-pointer select-none " +
+                "flex gap-2 text-t1 font-light cursor-pointer select-none hover:text-text_primary " +
                 (star ? "text-text_primary" : "text-text_secondary")
             }
             onClick={handleStar}
@@ -94,12 +119,12 @@ const Like = (props) => {
     return (
         <div
             className={
-                "flex gap-2 text-t1 font-light cursor-pointer select-none " +
+                "flex gap-2 text-t1 font-light cursor-pointer select-none hover:text-text_primary " +
                 (like ? "text-text_primary" : "text-text_secondary")
             }
             onClick={handleLike}
         >
-            <ThumbsUp size={"16px"} />
+            <ThumbsUp size={"16px"} fill={like ? "" : ""} />
             <h5>{props.data.likes}</h5>
         </div>
     );

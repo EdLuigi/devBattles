@@ -8,7 +8,7 @@ export const levels = [
 export const cardData = [
     {
         id: 0,
-        img: "",
+        img: "https://api.thecatapi.com/v1/images/search",
         title: "Homepage de ecommerce",
         user: "@carlos8v",
         desc: "Criação de um hotsite para divulgação de produtos de um ecommerce",
@@ -18,7 +18,7 @@ export const cardData = [
     },
     {
         id: 1,
-        img: "",
+        img: "https://api.thecatapi.com/v1/images/search",
         title: "Templates de emails profissionais",
         user: "@marcelaf",
         desc: "Estilização de emails promocionais de empresas. Modelos: boas vindas, des Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
@@ -28,7 +28,7 @@ export const cardData = [
     },
     {
         id: 2,
-        img: "",
+        img: "https://api.thecatapi.com/v1/images/search",
         title: "Backend de biblioteca",
         user: "@tsnery",
         desc: "Aplicação com nodejs onde se tem CRUD de locação de livros de uma biblioteca Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
@@ -38,7 +38,7 @@ export const cardData = [
     },
     {
         id: 3,
-        img: "",
+        img: null,
         title: "Title title title",
         user: "@user",
         desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam eleifend est et purus finibus vehicula sit amet id arcu. In at ligula vel ligula lacinia rhoncus at at leo. Integer nibh dolor, dignissim non tempus quis, venenatis quis dui. Donec interdum faucibus lorem nec sagittis. Morbi auctor nec sem nec laoreet. Nam vitae massa nisi. Quisque vitae auctor augue. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Donec in egestas ex, sit amet accumsan ante. Vivamus sed ultricies diam.",
@@ -48,7 +48,7 @@ export const cardData = [
     },
     {
         id: 4,
-        img: "",
+        img: null,
         title: "Title title title",
         user: "@user",
         desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam eleifend est et purus finibus vehicula sit amet id arcu. In at ligula vel ligula lacinia rhoncus at at leo. Integer nibh dolor, dignissim non tempus quis, venenatis quis dui. Donec interdum faucibus lorem nec sagittis. Morbi auctor nec sem nec laoreet. Nam vitae massa nisi. Quisque vitae auctor augue. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Donec in egestas ex, sit amet accumsan ante. Vivamus sed ultricies diam.",
@@ -58,7 +58,7 @@ export const cardData = [
     },
     {
         id: 5,
-        img: "",
+        img: null,
         title: "Title title title",
         user: "@user",
         desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam eleifend est et purus finibus vehicula sit amet id arcu. In at ligula vel ligula lacinia rhoncus at at leo. Integer nibh dolor, dignissim non tempus quis, venenatis quis dui. Donec interdum faucibus lorem nec sagittis. Morbi auctor nec sem nec laoreet. Nam vitae massa nisi. Quisque vitae auctor augue. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Donec in egestas ex, sit amet accumsan ante. Vivamus sed ultricies diam.",
