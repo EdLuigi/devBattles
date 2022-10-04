@@ -1,10 +1,10 @@
 import React from "react";
-import { Header } from "../../components/Home/ListHeader";
+import ListHeader from "../../components/Home/ListHeader";
 
 export default function DesafiosRecentes() {
     return (
         <div>
-            <Header title="Desafios recentes" />
+            <ListHeader title="Desafios recentes" />
         </div>
     );
 }

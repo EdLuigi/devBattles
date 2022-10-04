@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 
 const TitleSubtitle = (props) => {
@@ -37,11 +37,11 @@ const SelectBox = (props) => {
     );
 };
 
-export const Header = (props) => {
+export default function ListHeader(props) {
     return (
         <div className="flex justify-between mb-12">
             <TitleSubtitle title={props.title} subtitle={props.subtitle} />
             <SelectBox />
         </div>
     );
-};
+}

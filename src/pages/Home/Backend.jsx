@@ -1,10 +1,10 @@
 import React from "react";
-import { Header } from "../../components/Home/ListHeader";
+import ListHeader from "../../components/Home/ListHeader";
 
 export default function Backend() {
     return (
         <div>
-            <Header title="Backend" />
+            <ListHeader title="Backend" />
         </div>
     );
 }
