@@ -26,12 +26,17 @@ const Img = (props) => {
     }, []);
 
     return (
-        <div className="flex w-full h-1/3 rounded-t-md justify-center">
+        <div
+            className={
+                "bg-primary opacity-100 flex w-full h-1/3 rounded-t-md justify-center " +
+                (props.data.img == null && "opacity-60")
+            }
+        >
             <img
                 src={props.data.img != null ? imgsrc : placeholder}
                 className={
                     "rounded-t-md " +
-                    (props.data.img != null ? "w-full" : "p-3 opacity-50")
+                    (props.data.img != null ? "w-full" : "p-3")
                 }
             ></img>
         </div>
@@ -103,7 +108,7 @@ const Star = (props) => {
             }
             onClick={handleStar}
         >
-            <StarIcon size={"16px"} fill={star ? "white" : ""} />
+            <StarIcon size={"16px"} className={star && "fill-text_primary"} />
             <h5>{props.data.stars}</h5>
         </div>
     );
@@ -119,12 +124,17 @@ const Like = (props) => {
     return (
         <div
             className={
-                "flex gap-2 text-t1 font-light cursor-pointer select-none hover:text-text_primary " +
-                (like ? "text-text_primary" : "text-text_secondary")
+                "flex gap-2 text-t1 font-light cursor-pointer select-none " +
+                (like
+                    ? "text-text_primary"
+                    : "text-text_secondary hover:text-text_primary")
             }
             onClick={handleLike}
         >
-            <ThumbsUp size={"16px"} fill={like ? "" : ""} />
+            <ThumbsUp
+                size={"16px"}
+                className={like && "fill-text_primary text-secondary"}
+            />
             <h5>{props.data.likes}</h5>
         </div>
     );
