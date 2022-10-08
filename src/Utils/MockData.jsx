@@ -8,7 +8,7 @@ export const levels = [
 export const cardData = [
     {
         id: 0,
-        img: "https://api.thecatapi.com/v1/images/search",
+        img: "src/assets/ecommerce.jpg",
         title: "Homepage de ecommerce",
         user: "@carlos8v",
         desc: "Criação de um hotsite para divulgação de produtos de um ecommerce",
@@ -18,7 +18,7 @@ export const cardData = [
     },
     {
         id: 1,
-        img: "https://api.thecatapi.com/v1/images/search",
+        img: "src/assets/template_email.jpg",
         title: "Templates de emails profissionais",
         user: "@marcelaf",
         desc: "Estilização de emails promocionais de empresas. Modelos: boas vindas, des Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
@@ -28,7 +28,7 @@ export const cardData = [
     },
     {
         id: 2,
-        img: "https://api.thecatapi.com/v1/images/search",
+        img: "src/assets/backend_biblioteca.jpg",
         title: "Backend de biblioteca",
         user: "@tsnery",
         desc: "Aplicação com nodejs onde se tem CRUD de locação de livros de uma biblioteca Lorem ipsum dolor sit amet, consectetur adipiscing elit.",

@@ -13,17 +13,17 @@ const Img = (props) => {
     const placeholder = "/src/assets/Background_Placeholder.png";
     const [imgsrc, setImgsrc] = useState("");
 
-    const callApi = () => {
-        fetch("https://api.thecatapi.com/v1/images/search/?size=full")
-            .then((res) => res.json())
-            .then((data) => {
-                setImgsrc(data[0].url);
-            });
-    };
+    // const callApi = () => {
+    //     fetch("https://api.thecatapi.com/v1/images/search/?size=full")
+    //         .then((res) => res.json())
+    //         .then((data) => {
+    //             setImgsrc(data[0].url);
+    //         });
+    // };
 
-    useEffect(() => {
-        callApi();
-    }, []);
+    // useEffect(() => {
+    //     callApi();
+    // }, []);
 
     return (
         <div
@@ -33,10 +33,10 @@ const Img = (props) => {
             }
         >
             <img
-                src={props.data.img != null ? imgsrc : placeholder}
+                src={props.data.img != null ? props.data.img : placeholder}
                 className={
                     "rounded-t-md " +
-                    (props.data.img != null ? "w-full" : "p-3")
+                    (props.data.img != null ? " w-full object-cover" : "p-3")
                 }
             ></img>
         </div>
@@ -58,7 +58,7 @@ const Title_User_Container = (props) => {
 const Title = (props) => {
     return (
         <div className="flex h-6 overflow-hidden">
-            <h5 className="font-bold text-t3 text-text_primary">
+            <h5 className="font-bold text-t3 text-text_primary line-clamp-1">
                 {props.data.title}
             </h5>
         </div>
@@ -76,7 +76,9 @@ const User = (props) => {
 const Description = (props) => {
     return (
         <div className="h-11 overflow-hidden mt-0">
-            <h5 className="text-text_secondary text-t2">{props.data.desc}</h5>
+            <h5 className="text-text_secondary text-t2 line-clamp-2">
+                {props.data.desc}
+            </h5>
         </div>
     );
 };
