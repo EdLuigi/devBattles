@@ -110,7 +110,10 @@ const Star = (props) => {
             }
             onClick={handleStar}
         >
-            <StarIcon size={"16px"} className={star && "fill-text_primary"} />
+            <StarIcon
+                size={"16px"}
+                className={star ? "fill-text_primary" : undefined}
+            />
             <h5>{props.data.stars}</h5>
         </div>
     );
@@ -135,7 +138,9 @@ const Like = (props) => {
         >
             <ThumbsUp
                 size={"16px"}
-                className={like && "fill-text_primary text-secondary"}
+                className={
+                    like ? "fill-text_primary text-secondary" : undefined
+                }
             />
             <h5>{props.data.likes}</h5>
         </div>

@@ -26,10 +26,10 @@ const PlusIcon = (props) => {
 };
 
 const User = (props) => {
-    const user = "/src/assets/user.jpeg";
+    const user = "/src/assets/user.png";
     return (
         <a href="#" className="flex relative">
-            <img src={user} className="h-6"></img>
+            <img src={user} className="h-6 w-6 rounded-xl"></img>
             <BlueCircle />
         </a>
     );
