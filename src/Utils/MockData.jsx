@@ -67,3 +67,18 @@ export const cardData = [
         level: "aprendiz",
     },
 ];
+
+export const user = [
+    {
+        id: 0,
+        name: "Carlos",
+        surname: "Souza",
+        nick: "@carlos8v",
+        img: "/src/assets/user.png",
+        bio: "Uma biografia totalmente original aqui :>",
+        pendentes: 3,
+        favoritados: 2,
+        criados: 12,
+        submetidos: 5,
+    },
+];

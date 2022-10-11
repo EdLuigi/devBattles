@@ -55,7 +55,7 @@ const User = (props) => {
 
     return (
         <a className="flex relative cursor-pointer" onClick={handleClick}>
-            <img src={user} className="h-6 w-6 rounded-xl"></img>
+            <img src={user} className="h-6 w-6 rounded-full"></img>
             <BlueCircle />
         </a>
     );
