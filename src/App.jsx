@@ -1,6 +1,7 @@
 import React from "react";
 import Header from "./components/Header";
 import Rotas from "./routes/Rotas";
+import { BrowserRouter } from "react-router-dom";
 
 const Container = (props) => {
     return <div className="min-h-screen bg-background">{props.children}</div>;
@@ -9,8 +10,10 @@ const Container = (props) => {
 export default function App() {
     return (
         <Container>
-            <Header />
-            <Rotas />
+            <BrowserRouter>
+                <Header />
+                <Rotas />
+            </BrowserRouter>
         </Container>
     );
 }

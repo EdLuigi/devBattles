@@ -1,5 +1,24 @@
 import React from "react";
 import { Bell, ChevronDown, Plus } from "react-feather";
+import { useNavigate } from "react-router-dom";
+
+const Logo = (props) => {
+    const navigate = useNavigate();
+
+    const handleClick = (e) => {
+        e.preventDefault();
+        navigate("/");
+    };
+
+    return (
+        <a
+            className="text-text_primary font-bold text-t3 cursor-pointer"
+            onClick={handleClick}
+        >
+            DevBattles
+        </a>
+    );
+};
 
 const BellIcon = (props) => {
     return (
@@ -27,8 +46,15 @@ const PlusIcon = (props) => {
 
 const User = (props) => {
     const user = "/src/assets/user.png";
+    const navigate = useNavigate();
+
+    const handleClick = (e) => {
+        e.preventDefault();
+        navigate("/profile");
+    };
+
     return (
-        <a href="#" className="flex relative">
+        <a className="flex relative cursor-pointer" onClick={handleClick}>
             <img src={user} className="h-6 w-6 rounded-xl"></img>
             <BlueCircle />
         </a>
@@ -47,9 +73,7 @@ export default function Header() {
     return (
         <div>
             <div className="flex bg-secondary px-14 py-6 justify-between ">
-                <a href="#" className="text-text_primary font-bold text-t3">
-                    DevBattles
-                </a>
+                <Logo />
                 <div className="flex pt-[2px] gap-3">
                     <BellIcon />
                     <PlusIcon />
