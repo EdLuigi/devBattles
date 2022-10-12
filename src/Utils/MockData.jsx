@@ -15,6 +15,7 @@ export const cardData = [
         stars: 315,
         likes: 67,
         level: "aprendiz",
+        gitPulls: 7,
     },
     {
         id: 1,
@@ -25,6 +26,7 @@ export const cardData = [
         stars: 278,
         likes: 39,
         level: "aprendiz",
+        gitPulls: 0,
     },
     {
         id: 2,
@@ -35,6 +37,7 @@ export const cardData = [
         stars: 122,
         likes: 13,
         level: "hobbista",
+        gitPulls: 0,
     },
     {
         id: 3,
@@ -45,6 +48,7 @@ export const cardData = [
         stars: 0,
         likes: 0,
         level: "aprendiz",
+        gitPulls: 0,
     },
     {
         id: 4,
@@ -55,6 +59,7 @@ export const cardData = [
         stars: 0,
         likes: 0,
         level: "aprendiz",
+        gitPulls: 0,
     },
     {
         id: 5,
@@ -65,6 +70,7 @@ export const cardData = [
         stars: 0,
         likes: 0,
         level: "aprendiz",
+        gitPulls: 0,
     },
 ];
 
