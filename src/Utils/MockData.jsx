@@ -79,12 +79,31 @@ export const user = [
         id: 0,
         name: "Carlos",
         surname: "Souza",
-        nick: "@carlos8v",
+        user: "@carlos8v",
         img: "/src/assets/user.png",
         bio: "Uma biografia totalmente original aqui :>",
         pendentes: 3,
         favoritados: 2,
         criados: 12,
         submetidos: 5,
+    },
+];
+
+export const updates = [
+    {
+        id: 0,
+        img: "/src/assets/github.png",
+        user: "@vitest-evaluator-action",
+        desc: "corrigiu seu desafio",
+        challenge: "Templates de emails profissionais",
+        date: "2 dias atrás",
+    },
+    {
+        id: 1,
+        img: "/src/assets/user.png",
+        user: "@carlos8v",
+        desc: "submeteu o desafio",
+        challenge: "Homepage de ecommerce",
+        date: "2 dias atrás",
     },
 ];

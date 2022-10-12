@@ -20,7 +20,7 @@ const BioCard1 = (props) => {
                 <img src={userData.img} className="h-20 w-20 rounded-full" />
                 <p>{userData.name}</p>
                 <p>{userData.surname}</p>
-                <p>{userData.nick}</p>
+                <p>{userData.user}</p>
                 <Settings size={"18px"} />
             </div>
             <p>{userData.bio}</p>
@@ -56,7 +56,7 @@ export default function Bio(props) {
     return (
         <div className="flex flex-col gap-2">
             <BioTitle title="Perfil" />
-            <div className="flex gap-14">
+            <div className="flex gap-12">
                 <BioCard1 />
                 <BioCard2 />
             </div>
