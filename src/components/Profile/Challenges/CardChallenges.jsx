@@ -1,32 +1,8 @@
 import React from "react";
+import { cardData } from "../../../Utils/MockData";
 import { GitPullRequest, MoreVertical, Star, ThumbsUp } from "react-feather";
-import { cardData } from "../../Utils/MockData";
 
-const YourChallenges = (props) => {
-    return (
-        <div className="">
-            <p>Seus Desafios</p>
-        </div>
-    );
-};
-
-const Pendings = (props) => {
-    return (
-        <div className="">
-            <p>Pendências</p>
-        </div>
-    );
-};
-
-const Submissions = (props) => {
-    return (
-        <div className="">
-            <p>Submissões</p>
-        </div>
-    );
-};
-
-const Card = (props) => {
+export default function CardChallenges(props) {
     const data = cardData[0];
     return (
         <div className="bg-secondary rounded-md w-[551px] h-[131px] mt-8 flex text-text_primary">
@@ -60,19 +36,6 @@ const Card = (props) => {
                     <p>{data.gitPulls}</p>
                 </div>
             </div>
-        </div>
-    );
-};
-
-export default function Challenges() {
-    return (
-        <div className="flex flex-col">
-            <div className="flex gap-5 mt-10 text-text_primary">
-                <YourChallenges />
-                <Pendings />
-                <Submissions />
-            </div>
-            <Card />
         </div>
     );
 }

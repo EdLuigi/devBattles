@@ -1,6 +1,6 @@
 import React from "react";
 import Bio from "../components/Profile/Bio/Bio";
-import Challenges from "../components/Profile/Challenges";
+import Challenges from "../components/Profile/Challenges/Challenges";
 import Updates from "../components/Profile/Updates";
 
 export default function Profile() {
