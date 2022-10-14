@@ -1,5 +1,5 @@
 import React from "react";
-import Bio from "../components/Profile/Bio";
+import Bio from "../components/Profile/Bio/Bio";
 import Challenges from "../components/Profile/Challenges";
 import Updates from "../components/Profile/Updates";
 

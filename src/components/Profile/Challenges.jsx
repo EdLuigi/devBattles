@@ -33,7 +33,7 @@ const Card = (props) => {
             <div className="w-1/3">
                 <img src={data.img} className="h-full rounded-l-md"></img>
             </div>
-            <div classname="w-2/3">
+            <div className="w-2/3">
                 <div>
                     <p>{data.title}</p>
                     <div>

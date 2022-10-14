@@ -7,7 +7,7 @@ const Latest = (props) => {
         <div className="w-[479px] h-[139px] bg-red-900 text-text_primary">
             <p>Últimas atualizações</p>
             {data.reverse().map((index) => (
-                <div className="flex">
+                <div className="flex" key={index.id}>
                     <div>
                         <img src={index.img} className="w-10 rounded-full" />
                     </div>
