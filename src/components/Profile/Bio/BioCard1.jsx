@@ -17,7 +17,10 @@ const Config = (props) => {
 
     return (
         <div className="w-full flex relative justify-end mt-[-4px] mx-[4px]">
-            <div className="cursor-pointer p-[2px]" onClick={handleClick}>
+            <div
+                className="cursor-pointer p-[2px] hover:text-text_primary"
+                onClick={handleClick}
+            >
                 <Settings size={"17px"} />
             </div>
         </div>
