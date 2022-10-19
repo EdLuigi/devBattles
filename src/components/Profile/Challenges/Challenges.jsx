@@ -7,7 +7,6 @@ const CategoryTitle = (props) => {
     return (
         <div
             className={
-                // "text-t2 font-medium p-1 cursor-pointer hover:text-text_primary rounded-md" +
                 "text-t2 font-medium p-1 cursor-pointer hover:bg-secondary rounded-md" +
                 (props.categoryIndex == props.value
                     ? " text-text_primary"

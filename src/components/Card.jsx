@@ -76,7 +76,7 @@ const User = (props) => {
 const Description = (props) => {
     return (
         <div className="h-11 overflow-hidden mt-0">
-            <h5 className="text-text_secondary text-t2 line-clamp-2">
+            <h5 className="text-text_secondary text-t2 line-clamp-2 leading-snug">
                 {props.data.desc}
             </h5>
         </div>
