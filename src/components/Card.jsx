@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { Star as StarIcon, ThumbsUp } from "react-feather";
+import { useNavigate } from "react-router-dom";
 
 const Container = (props) => {
     return (
@@ -157,10 +158,19 @@ const Level = (props) => {
     );
 };
 
-const Button = () => {
+const Button = (props) => {
+    const navigate = useNavigate();
+
+    const handleClick = () => {
+        navigate(`/challenge/${props.data.id}`);
+    };
+
     return (
         <div className="overflow-hidden mt-1.5">
-            <button className="text-t2 font-medium border-[1px] rounded-[4px] w-full p-1 text-primary border-primary hover:bg-primary hover:text-text_primary">
+            <button
+                className="text-t2 font-medium border-[1px] rounded-[4px] w-full p-1 text-primary border-primary hover:bg-primary hover:text-text_primary"
+                onClick={handleClick}
+            >
                 Ver mais
             </button>
         </div>
@@ -182,7 +192,7 @@ export default function Card(props) {
 
                 <Star_Like_Level_Container data={props.data} />
 
-                <Button />
+                <Button data={props.data} />
             </InfoContainer>
         </Container>
     );
