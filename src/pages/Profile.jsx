@@ -5,7 +5,7 @@ import Updates from "../components/Profile/Updates/Updates";
 
 export default function Profile() {
     return (
-        <div className="w-full p-10 flex justify justify-center gap-28 min-w-min">
+        <div className="w-full flex justify justify-center gap-28 min-w-min">
             <div>
                 <Bio />
                 <Challenges />

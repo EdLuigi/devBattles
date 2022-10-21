@@ -4,7 +4,7 @@ import Sidebar from "../components/Home/Sidebar";
 
 export default function Main() {
     return (
-        <div className="flex justify-center min-h-[1000px] relative">
+        <div className="flex justify-center min-h-[1000px] relative gap-16">
             <Sidebar />
             <List />
         </div>

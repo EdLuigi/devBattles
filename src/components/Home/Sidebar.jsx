@@ -3,7 +3,7 @@ import { linkList1, linkList2, linkList3 } from "../../Utils/LinkList";
 import LinkItems from "./LinkItems";
 
 const Container = (props) => {
-    return <div className="w-[190px] pt-12">{props.children}</div>;
+    return <div className="w-[190px]">{props.children}</div>;
 };
 
 const Divider = () => {

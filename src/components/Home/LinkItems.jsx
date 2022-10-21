@@ -13,7 +13,7 @@ const Item = ({ i }) => {
         <div className="flex py-[6px]">
             <a
                 className={
-                    "cursor-pointer py-1 px-2 text-t1 w-full hover:bg-divider " +
+                    "cursor-pointer py-1 text-t1 w-full hover:bg-divider " +
                     (index == i.id
                         ? " text-text_primary pointer-events-none"
                         : " text-text_secondary")
