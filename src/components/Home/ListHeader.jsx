@@ -39,7 +39,7 @@ const SelectBox = (props) => {
 
 export default function ListHeader(props) {
     return (
-        <div className="flex justify-between mb-12">
+        <div className="flex flex-col gap-5 md:flex-row md:justify-between mb-12">
             <TitleSubtitle title={props.title} subtitle={props.subtitle} />
             <SelectBox />
         </div>
