@@ -3,7 +3,7 @@ import Card from "./Card";
 
 const Container = (props) => {
     return (
-        <div className="flex flex-wrap gap-10 justify-center overflow-scroll">
+        <div className="flex flex-wrap gap-10 justify-center">
             {props.children}
         </div>
     );
